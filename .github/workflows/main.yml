@@ -6,10 +6,6 @@ on:
 
   workflow_dispatch:
 
-env:
-  REACT_APP_ENV : 'production'
-  REACT_APP_API_URL : {{ secrets.REACT_APP_API_URL }}
-
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -27,6 +23,9 @@ jobs:
         run: yarn
       - name: Build
         run: yarn build:prod
+        env:
+          REACT_APP_ENV : 'production'
+          REACT_APP_API_URL : {{ secrets.REACT_APP_API_URL }}
 
       - name: deploy file to server
         uses: wlixcc/SFTP-Deploy-Action@v1.0
