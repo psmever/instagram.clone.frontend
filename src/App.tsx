@@ -1,26 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
+import './styles/reset.css';
+import './styles/globals.css';
+import './styles/edit-profile.css';
+import './styles/explore.css';
+import './styles/feed.css';
+import './styles/footer.css';
+import './styles/login.css';
+import './styles/mobile.css';
+import './styles/navigation.css';
+import './styles/profile.css';
+import './styles/styles.css';
+import './styles/variables.css';
+
+import RootRoutes from './modules/RootRoutes';
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <RootRoutes />;
 }
 
 export default App;
