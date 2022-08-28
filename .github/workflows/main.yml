@@ -21,11 +21,13 @@ jobs:
 
       - name: Install Dependencies
         run: yarn
+      - name: Setting .env
+        run: |
+          echo "REACT_APP_ENV=production" >> .env
+          echo "REACT_APP_API_URL=${{ secrets.REACT_APP_API_URL }}" >> .env
+          cat .env
       - name: Build
         run: yarn build:prod
-        env:
-          REACT_APP_ENV : 'production'
-          REACT_APP_API_URL : {{ secrets.REACT_APP_API_URL }}
 
       - name: deploy file to server
         uses: wlixcc/SFTP-Deploy-Action@v1.0
