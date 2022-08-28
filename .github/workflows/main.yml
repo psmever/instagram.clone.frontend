@@ -20,6 +20,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      env:
+        REACT_APP_ENV=production
+        REACT_APP_API_URL={{ secrets.REACT_APP_API_URL }}
+
       - name: Install Dependencies
         run: yarn
       - name: Build
