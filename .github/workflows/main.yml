@@ -6,6 +6,10 @@ on:
 
   workflow_dispatch:
 
+env:
+  REACT_APP_ENV=production
+  REACT_APP_API_URL={{ secrets.REACT_APP_API_URL }}
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -15,9 +19,6 @@ jobs:
     name: build&deploy
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-        env:
-          REACT_APP_ENV=production
-          REACT_APP_API_URL={{ secrets.REACT_APP_API_URL }}
       # To use this repository's private action, you must check out the repository
       - name: Checkout
         uses: actions/checkout@v2
