@@ -12,35 +12,27 @@ export default function DefaultPage() {
           </td>
         </tr>
         <tr>
-          <th scope="row">프로필</th>
+          <th scope="row">feed</th>
           <td>
-            <a href="profile.html" target="_blank">
-              이동
-            </a>
+            <Link to="/post/feed">feed</Link>
           </td>
         </tr>
         <tr>
-          <th scope="row">feed</th>
+          <th scope="row">프로필</th>
           <td>
-            <a href="feed.html" target="_blank">
-              이동
-            </a>
+            <Link to="/user/profile">프로필</Link>
           </td>
         </tr>
         <tr>
           <th scope="row">explore</th>
           <td>
-            <a href="explore.html" target="_blank">
-              이동
-            </a>
+            <Link to="/user/explore">explore</Link>
           </td>
         </tr>
         <tr>
           <th scope="row">edit-profile</th>
           <td>
-            <a href="edit-profile.html" target="_blank">
-              이동
-            </a>
+            <Link to="/user/edit-profile">edit-profile</Link>
           </td>
         </tr>
       </tbody>
