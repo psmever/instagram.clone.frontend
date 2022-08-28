@@ -2,7 +2,7 @@ name: Front Deploy
 
 on:
   push:
-    branches: ["main"]
+    branches: ['main']
 
   workflow_dispatch:
 
@@ -13,16 +13,14 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     name: build&deploy
+    env: REACT_APP_ENV=production
+      REACT_APP_API_URL={{ secrets.REACT_APP_API_URL }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # To use this repository's private action, you must check out the repository
       - name: Checkout
         uses: actions/checkout@v2
-
-      env:
-        REACT_APP_ENV=production
-        REACT_APP_API_URL={{ secrets.REACT_APP_API_URL }}
 
       - name: Install Dependencies
         run: yarn
@@ -32,10 +30,10 @@ jobs:
       - name: deploy file to server
         uses: wlixcc/SFTP-Deploy-Action@v1.0
         with:
-          username: "${{ secrets.USERNAME}}"
-          server: "${{ secrets.HOST }}"
-          ssh_private_key: "${{ secrets.KEY }}"
+          username: '${{ secrets.USERNAME}}'
+          server: '${{ secrets.HOST }}'
+          ssh_private_key: '${{ secrets.KEY }}'
           port: ${{ secrets.PORT }}
-          local_path: "./build/*"
-          remote_path: "/var/www/site/instagram.clone/front"
-          args: "-o ConnectTimeout=5"
+          local_path: './build/*'
+          remote_path: '/var/www/site/instagram.clone/front'
+          args: '-o ConnectTimeout=5'
