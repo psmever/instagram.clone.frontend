@@ -22,6 +22,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "lint:do": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
     "build": "react-scripts build",
     "build:prod": "react-scripts build",
     "test": "react-scripts test",
