@@ -65,6 +65,11 @@
       "tslint",
       "prettier --write",
       "git add"
+    ],
+    "*.tsx": [
+      "tslint",
+      "prettier --write",
+      "git add"
     ]
   }
 }
