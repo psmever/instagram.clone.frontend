@@ -6,6 +6,12 @@ export default function DefaultPage() {
     <table className="type07">
       <tbody>
         <tr>
+          <th scope="row">회원가입</th>
+          <td>
+            <Link to="/publish/auth/sign-up">회원가입</Link>
+          </td>
+        </tr>
+        <tr>
           <th scope="row">로그인</th>
           <td>
             <Link to="/publish/auth/login">로그인</Link>
