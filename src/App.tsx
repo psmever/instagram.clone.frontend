@@ -12,6 +12,7 @@ import './styles/navigation.css';
 import './styles/profile.css';
 import './styles/styles.css';
 import './styles/variables.css';
+import './styles/signup.css';
 
 import RootRoutes from './modules/RootRoutes';
 function App() {
