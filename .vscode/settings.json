@@ -1,0 +1,10 @@
+{
+  // typescript 파일에 대해서만 적용
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode", // prettier 기본 formatter 설정
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true, // 파일 저장 시 모든 코드 수정 자동
+      "source.organizeImports": true // 파일 저장 시 import 문 자동 정리
+    }
+  }
+}

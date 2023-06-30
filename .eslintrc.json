@@ -1,0 +1,35 @@
+{
+  "env": {
+    // 사용 환경 의미
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    // 확장 기능 사용
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    // 버전과 모듈 사용 여부
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["@typescript-eslint"], // 사용되는 플러그인
+  "rules": {
+    // 세부 설정(규칙) 추가
+    "@typescript-eslint/no-unused-vars": "error", // 사용하지 않는 변수 에러 처리
+    "prettier/prettier": [
+      // prettier 스타일 가이드에 따르지 않은 경우 에러 처리
+      "error",
+      {
+        "endOfLine": "auto" // 개행문자 자동 선택
+      }
+    ]
+  },
+  "ignorePatterns": ["build/", "node_modules/"] // eslint 불필요한 것
+}
